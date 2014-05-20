@@ -3,6 +3,7 @@ var mongojs       =     require('mongojs');
 var morgan        =     require('morgan');
 var db            =     require('buckelistapp', ['appUsers', 'bucketLists']);
 var server        =     require('server');
+var manageUsers   =     require('./auth/manageUser')(server, db);
 
 server.use(restify.acceptParser(server.accetable));
 server.use(restify.queryParser());
