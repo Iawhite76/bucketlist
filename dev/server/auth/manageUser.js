@@ -12,7 +12,6 @@ module.exports = function (server, db) {
         var user = req.params;
         pwdMgr.cryptPassword(user.password, function (err, hash) {
             user.password = hash;
-            console.log("n", hash);
             db.appUsers.insert(user,
                 function (err, dbUser) {
                     if (err) { // duplicate key error
@@ -47,7 +46,6 @@ module.exports = function (server, db) {
                 error: "Invalid Credentials"
             }));
         }
-        console.log("in");
         db.appUsers.findOne({
             email: req.params.email
         }, function (err, dbUser) {
