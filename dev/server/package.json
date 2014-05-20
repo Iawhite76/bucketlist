@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "End to end hybrid app built with Ionic, Mongodb, Node.js and Angular.js from this tutorial: http://thejackalofjavascript.com/an-end-to-end-hybrid-app/",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Iawhite76/bucketlist"
+  },
+  "keywords": [
+    "ionic",
+    "hybird",
+    "app",
+    "mongodb",
+    "angular.js",
+    "node.js",
+    "javascript",
+    "git"
+  ],
+  "author": "Ian White",
+  "license": "MIT",
+  // be sure to include engines when deploying to Heroku
+  "engines": {
+    "node": "0.10.x"
+  },
+  "bugs": {
+    "url": "https://github.com/Iawhite76/bucketlist/issues"
+  },
+  "homepage": "https://github.com/Iawhite76/bucketlist",
+  "dependencies": {
+    "morgan": "^1.1.0",
+    "bcrypt": "^0.7.8",
+    "restify": "^2.8.1",
+    "mongojs": "^0.13.0"
+  }
+}
