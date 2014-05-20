@@ -1,5 +1,8 @@
 angular.module('bucketList.controllers', ['bucketList.services'])
 
+// NOTE: The show() , hide()  and notify()
+// are declared in services.js and are used to show messages to the user.
+
 .controller('SignInCtrl', function ($rootScope, $scope, API, $window) {
     // if the user is already logged in, take him to his bucketlist
     if ($rootScope.isSessionActive()) {
