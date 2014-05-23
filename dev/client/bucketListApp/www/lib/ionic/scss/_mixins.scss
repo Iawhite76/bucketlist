@@ -12,8 +12,7 @@
     color: $color;
     text-decoration: none;
   }
-  &.active,
-  &.activated {
+  &.active {
     border-color: $active-border-color;
     background-color: $active-bg-color;
     box-shadow: inset 0px 1px 3px rgba(0,0,0,0.15);
@@ -45,8 +44,7 @@
       $text-color: $color;
     }
     color: $text-color;
-    &.active,
-    &.activated {
+    &.active {
       background-color: $color;
       box-shadow: none;
       color: #fff;
@@ -126,14 +124,12 @@
 // --------------------------------------------------
 
 @mixin checkbox-style($off-border-color, $on-bg-color) {
-  & input:before,
-  & .checkbox-icon:before {
-    border-color: $off-border-color;
+  & input:before {
+    border: $checkbox-border-width solid $off-border-color;
   }
 
   // what the background looks like when its checked
-  & input:checked:before,
-  & input:checked + .checkbox-icon:before {
+  & input:checked:before {
     background: $on-bg-color;
   }
 }

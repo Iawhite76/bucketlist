@@ -1,6 +1,6 @@
 angular.module('bucketList.services', [])
     .factory('API', function ($rootScope, $http, $ionicLoading, $window) {
-       var base = "http://localhost:9804";
+       var base = "http://bucketlistapplication.herokuapp.com";
         $rootScope.show = function (text) {
             $rootScope.loading = $ionicLoading.show({
                 content: text ? text : 'Loading',
@@ -32,7 +32,7 @@ angular.module('bucketList.services', [])
                 $rootScope.$broadcast('fetchAll');
             else
                 $rootScope.$broadcast('fetchCompleted');
-
+            
             $rootScope.$broadcast('scroll.refreshComplete');
         };
 
